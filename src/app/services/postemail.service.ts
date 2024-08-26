@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class PostemailService {
 
-  baseUrl: string = "https://formsubmit.co/ranjithswamy@gmail.com";
+  baseUrl: string = "https://formsubmit.co/ajax/ranjithswamy@gmail.com";
 
   constructor(private http: HttpClient) { }
 

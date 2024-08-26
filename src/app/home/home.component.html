@@ -67,32 +67,38 @@
       <div class="col-md-12	featured-top">
         <div class="row no-gutters">
           <div class="col-md-4 d-flex align-items-center">
-            <form action="#" class="request-form bg-primary">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" class="request-form bg-primary">
               <h2>Make your trip</h2>
               <div class="form-group">
                 <label for="" class="label">Pick-up location</label>
-                <input type="text" class="form-control" placeholder="City, Airport, Station, etc">
+                <input class="form-control" placeholder="City, Airport, Station, etc"
+                  formControlName="pickUPlocation" >
               </div>
               <div class="form-group">
                 <label for="" class="label">Drop-off location</label>
-                <input type="text" class="form-control" placeholder="City, Airport, Station, etc">
+                <input class="form-control" placeholder="City, Airport, Station, etc"
+                  formControlName="dropLocation" >
               </div>
               <div class="d-flex">
                 <div class="form-group mr-2">
                   <label for="" class="label">Pick-up date</label>
-                  <input type="text" class="form-control" id="book_pick_date" placeholder="Date">
+                  <input class="form-control" id="book_pick_date" placeholder="Date"
+                    formControlName="pickUpDate" >
                 </div>
                 <div class="form-group ml-2">
                   <label for="" class="label">Drop-off date</label>
-                  <input type="text" class="form-control" id="book_off_date" placeholder="Date">
+                  <input class="form-control" id="book_off_date" placeholder="Date"
+                    formControlName="dropDate" >
                 </div>
               </div>
               <div class="form-group">
                 <label for="" class="label">Pick-up time</label>
-                <input type="text" class="form-control" id="time_pick" placeholder="Time">
+                <input class="form-control" id="time_pick" placeholder="Time"
+                  formControlName="pickUpTime" >
               </div>
               <div class="form-group">
-                <input type="submit" value="Get a quote" class="btn btn-primary py-3 px-4">
+                <button type="submit" class="btn btn-primary py-3 px-4">
+                  Get a quote</button>
               </div>
             </form>
           </div>

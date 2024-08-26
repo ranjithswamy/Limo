@@ -1,5 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { FormsModule } from '@angular/forms';
+
 
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
@@ -14,7 +16,7 @@ import { ServiceModule } from "./service/service.module";
   declarations: [AppComponent],
   imports: [BrowserModule, AppRoutingModule,
     HomeModule, BookModule, CarsModule, ContactModule,
-    PricingModule, ServiceModule],
+    PricingModule, ServiceModule, FormsModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
